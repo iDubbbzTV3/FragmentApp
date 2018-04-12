@@ -46,6 +46,7 @@ public class FragmentList extends ListFragment implements AdapterView.OnItemClic
             newIntent.setAction(Intent.ACTION_SEND);
             newIntent.setType("text/plain");
             newIntent.putExtra(Intent.EXTRA_TEXT, adapterView.getItemAtPosition(i).toString());
+
             startActivity(newIntent);
         }else if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE){
             Toast.makeText(getActivity(), "Item: " + adapterView.getItemAtPosition(i).toString(), Toast.LENGTH_SHORT).show();
@@ -55,14 +56,17 @@ public class FragmentList extends ListFragment implements AdapterView.OnItemClic
             FragmentViewer frag = new FragmentViewer();
             frag.setArguments(bundle);
 
+            Bundle bundle2 = new Bundle();
+            bundle2.putString("KEY2", adapterView.getItemAtPosition(i).toString());
+            FragmentViewer fragmento = new FragmentViewer();
+            fragmento.setArguments(bundle2);
+
             FragmentManager fragmentManager = getFragmentManager();
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
             fragmentTransaction.replace(R.id.viewer, frag);
             fragmentTransaction.commit();
         }
-
-
 
     }
 }

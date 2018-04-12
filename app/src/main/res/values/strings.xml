@@ -12,4 +12,15 @@
         <item>Uranus</item>
         <item>Neptune</item>
     </string-array>
+    <string-array name="Descriptions">
+        <item>Es el mas grande objeto del sistema solar</item>
+        <item>Es el mas cercano y eso</item>
+        <item>Bien caliente</item>
+        <item>Yo vivo ahi</item>
+        <item>Elon Musk va para alla</item>
+        <item>No entiendo</item>
+        <item>Las donas son una mentira</item>
+        <item>JEH</item>
+        <item>OH NEPTUNO!</item>
+    </string-array>
 </resources>

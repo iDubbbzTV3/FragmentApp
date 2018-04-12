@@ -28,6 +28,8 @@ public class FragmentViewer extends Fragment {
 
             text.setText(bundle.getString("KEY"));
 
+            text.setText(bundle.getString("KEY2"));
+
         }
 
         return view;
